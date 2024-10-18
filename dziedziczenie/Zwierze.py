@@ -1,0 +1,3 @@
+class Zwierze:
+
+    pass
