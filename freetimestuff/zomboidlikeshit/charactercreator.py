@@ -97,3 +97,4 @@ while True:
 print("chosen character traits: ",character_traits)
 print("stats: ", strength, inteligence , fitness )
 print("points : ", points)
+input()
