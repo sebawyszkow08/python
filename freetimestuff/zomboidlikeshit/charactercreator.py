@@ -1,10 +1,11 @@
 points = 0
 strength = 10
 inteligence = 10
-fitness = 10
+endurance = 10
 
 
-all_traits = ["weak","strong","brawler","smart","dumb","stupid","fit","unfit","fatty"]
+
+all_traits = ["weak","strong","brawler","smart","dumb","stupid","fit","unfit","fatty", "smoker"]
 character_traits = []
 print("pick traits : ", all_traits)
 
