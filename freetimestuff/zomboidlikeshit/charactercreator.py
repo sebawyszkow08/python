@@ -18,19 +18,19 @@ while True:
         
 
     
-        if choice == "strong":
+        if character_traits.count(choice) == 0 and choice == "strong":
             if character_traits.count("weak") == 0 and character_traits.count("brawler") == 0 and points > 2:
                 points -= 2
                 strength += 2
                 character_traits.append(choice) 
 
-        if choice == "weak":
+        if character_traits.count(choice) == 0 and choice == "weak":
             if character_traits.count("strong") == 0 and character_traits.count("brawler") == 0:
                 points += 5
                 strength -= 4
                 character_traits.append(choice) 
 
-        if choice == "brawler":
+        if character_traits.count(choice) == 0 and choice == "brawler":
             if character_traits.count("weak") == 0 and character_traits.count("strong") == 0 and points > 8:
                 points -= 8
                 strength += 5
@@ -38,19 +38,19 @@ while True:
 
 
 
-        if choice == "smart":
+        if character_traits.count(choice) == 0 and choice == "smart":
             if character_traits.count("dumb") == 0 and character_traits.count("stupid") == 0 and points > 2:
                 points -= 2
                 inteligence += 2
                 character_traits.append(choice) 
 
-        if choice == "dumb":
+        if character_traits.count(choice) == 0 and choice == "dumb":
             if character_traits.count("smart") == 0 and character_traits.count("stupid") == 0:
                 points += 3
                 inteligence -= 3
                 character_traits.append(choice)
 
-        if choice == "stupid":
+        if character_traits.count(choice) == 0 and choice == "stupid":
             if character_traits.count("smart") == 0 and character_traits.count("dumb") == 0:
                 points += 6
                 inteligence -= 6
@@ -58,37 +58,46 @@ while True:
 
 
 
-        if choice == "fit":
+        if character_traits.count(choice) == 0 and choice == "fit":
             if character_traits.count("unfit") == 0 and character_traits.count("fatty") == 0 and points > 5:
                 points -= 5
                 fitness += 4
                 character_traits.append(choice)
 
-        if choice == "unfit":
+        if character_traits.count(choice) == 0 and choice == "unfit":
             if character_traits.count("fit") == 0 and character_traits.count("fatty") == 0:
                 points += 2
                 fitness -= 3
                 character_traits.append(choice)
 
-        if choice == "fatty":
+        if character_traits.count(choice) == 0 and choice == "fatty":
             if character_traits.count("unfit") == 0 and character_traits.count("fit") == 0:
                 points += 8
                 fitness -= 6
                 character_traits.append(choice)
 
 
+        if character_traits.count(choice) == 0 and choice == "smoker":
+            
+            points += 4
+            fitness -= 1
+            character_traits.append(choice)
 
-    elif choice == "show":
+        
+
+
+
+    elif character_traits.count(choice) == 0 and choice == "show":
         print(character_traits, " pionts left: ", points)
 
-    elif choice == "reset":
+    elif character_traits.count(choice) == 0 and choice == "reset":
         character_traits.clear()
         points = 0
         strength = 10
         inteligence = 10
         fitness = 10
 
-    elif choice == "end":
+    elif character_traits.count(choice) == 0 and choice == "end":
         break
 
     else:
