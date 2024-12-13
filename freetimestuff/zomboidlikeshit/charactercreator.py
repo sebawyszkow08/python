@@ -1,3 +1,7 @@
+import os
+os.system("cls")
+
+
 points = 0
 strength = 10
 inteligence = 10
@@ -5,7 +9,7 @@ endurance = 10
 
 
 
-all_traits = ["weak","strong","brawler","smart","dumb","stupid","fit","unfit","fatty", "smoker"]
+all_traits = ["weak","strong","brawler","smart","dumb","stupid","fit","unfit","fatty", "smoker","coward","teenage","bully"]
 character_traits = []
 print("pick traits : ", all_traits)
 
@@ -79,9 +83,35 @@ while True:
 
         if character_traits.count(choice) == 0 and choice == "smoker":
             
-            points += 4
-            fitness -= 1
+            points += 2
+            endurance -= 1
             character_traits.append(choice)
+
+        if character_traits.count(choice) == 0 and choice == "coward":
+            
+            points += 3
+            
+            character_traits.append(choice)
+
+        if character_traits.count(choice) == 0 and choice == "teenage":
+            
+            points += 6
+            endurance -= 1
+            strength -= 2
+            inteligence -= 2
+            
+            character_traits.append(choice)
+            
+        if character_traits.count(choice) == 0 and choice == "bully":
+            
+            points -= 4
+            endurance += 1
+            strength += 3
+            inteligence -= 3
+            
+            character_traits.append(choice)
+            
+        
 
         
 
